@@ -1,0 +1,27 @@
+{
+  "name": "crossout",
+  "version": "1.0.0",
+  "description": "Diagonally cross out text using data attribute",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log('no tests yet');"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanFoad/crossout.js.git"
+  },
+  "keywords": [
+    "cross",
+    "out",
+    "crossout",
+    "text",
+    "js",
+    "javascript"
+  ],
+  "author": "Dan Foad (danfoad.co.uk)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DanFoad/crossout.js/issues"
+  },
+  "homepage": "https://github.com/DanFoad/crossout.js#readme"
+}
