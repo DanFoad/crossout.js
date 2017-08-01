@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    
+    <script src="crossout.js"></script>
+</head>
+<body>
+    <div>Lorem ipsum dolor sit amet, <span data-crossedout>consectetur adipisicing elit</span>. Blanditiis quas laborum repudiandae, voluptates doloribus. Nobis a aut, dignissimos consectetur <span data-crossedout>unde eius</span> ullam totam, autem quae voluptatum. Asperiores dignissimos, necessitatibus ipsam.</div>
+    <br>
+    <div style="font-size: 48px; text-align: center;">
+        <span data-crossedout="{thickness: 8, color: #FF0000}">Test words</span>
+    </div>
+    
+    <script>
+        new Crossout().crossout();
+    </script>
+</body>
+</html>
