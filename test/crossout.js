@@ -5,11 +5,15 @@
  * Possible settings (default)
  * thickness (2)
  * color (#000000)
+ * rounded (false)
+ * extension (0)
  */
 function Crossout(args) {
     if (!args) args = {};
     this.thickness = args.thickness || 2;
     this.color = args.color || "#000000";
+    this.rounded = args.rounded || false;
+    this.extension = args.extension || 0;
 }
 
 /** Crossout::getAttributes
@@ -51,6 +55,8 @@ Crossout.prototype.addLine = function(el, attributes) {
     // Set settings from individual settings/global settings/defaults
     var thickness = attributes.thickness || this.thickness;
     var color = attributes.color || this.color;
+    var rounded = (attributes.rounded == 'true') || this.rounded;
+    var extension = parseInt(attributes.extension) || this.extension;
 
     // Calculate rotation for line to match text width
     var h = el.offsetHeight;
@@ -60,15 +66,17 @@ Crossout.prototype.addLine = function(el, attributes) {
     // Create and style line
     var line = document.createElement('span');
     line.style.height = thickness + "px";
-    line.style.width = "100%";
+    line.style.width = "calc(100% + "  + extension + "px)";
     line.style.display = "inline-block";
     line.style.position = "absolute";
     line.style.top = (thickness / 2) + "px";
     line.style.bottom = "0";
-    line.style.left = "0";
+    line.style.left = -1 * (extension / 2) + "px";
     line.style.margin = "auto";
     line.style.backgroundColor = color;
     line.style.transform = "rotate(" + rotation + "deg)";
+    
+    if (rounded) line.style.borderRadius = (thickness / 2) + "px";
     
     // Add line to element
     el.appendChild(line);
