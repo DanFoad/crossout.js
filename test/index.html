@@ -7,14 +7,14 @@
     <script src="crossout.js"></script>
 </head>
 <body>
-    <div>Lorem ipsum dolor sit amet, <span data-crossedout>consectetur adipisicing elit</span>. Blanditiis quas laborum repudiandae, voluptates doloribus. Nobis a aut, dignissimos consectetur <span data-crossedout>unde eius</span> ullam totam, autem quae voluptatum. Asperiores dignissimos, necessitatibus ipsam.</div>
+    <div>Lorem ipsum dolor sit amet, <span data-crossedout>consectetur adipisicing elit</span>. Blanditiis quas laborum repudiandae, voluptates doloribus. Nobis a aut, dignissimos consectetur <span data-crossedout="{reverseDirection: true}">unde eius</span> ullam totam, autem quae voluptatum. Asperiores dignissimos, necessitatibus ipsam.</div>
     <br>
     <div style="font-size: 48px; text-align: center;">
         <span data-crossedout="{thickness: 8, color: #FF0000, rounded: true, extension: 16}">Test words</span>
     </div>
     
     <script>
-        new Crossout().crossout();
+        new Crossout();
     </script>
 </body>
 </html>
