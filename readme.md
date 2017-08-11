@@ -6,7 +6,7 @@ Diagonally crosses out words using data attribute
 
 `npm install crossout`
 
-`var Crossout = require('crossout');`
+`<script src="path/to/crossout.js"></script>`
 
 ```
 <span data-crossedout>consectetur adipisicing</span>

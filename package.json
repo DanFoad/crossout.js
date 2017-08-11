@@ -1,6 +1,6 @@
 {
   "name": "crossout",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Diagonally cross out text using data attribute",
   "main": "lib/crossout.js",
   "scripts": {
